@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0dbb9e;
+  --secondary-color: #ef6356;
+  --primary-text-color: #0dbb9e;
+  --secondary-text-color: #7d7d7d;
+  --tertiary-text-color: #141f1d;
+  --background-color: #f8fafb;
+}
+
+.darkMode{
+  --tertiary-text-color: #f8fafb;
+  --background-color: #121212;
+}
+
+.header-icons-styles {
+  @apply w-[2.8rem] aspect-square bg-gray-200 flex justify-center items-center rounded-full hover:scale-110 duration-300 ease-in-out active:scale-90 cursor-pointer;
+}
+
+.selected-icon-style {
+  @apply text-white bg-[color:var(--primary-color)];
+}
+
+.sticky-wrapper {
+  @apply absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-56 z-10 shadow-sm shadow-gray-400 opacity-95 bg-[color:var(--surface-color)] touch-none ;
+}
+
+.sticky {
+  @apply flex flex-col w-full;
+}
+
+.sticky-top {
+  @apply flex justify-between items-center p-1 bg-gray-100;
+}
+
+.sticky-heading {
+  @apply text-xl bg-transparent text-[color:var(--primary-text-color)] font-semibold outline-none focus:bg-gray-200 w-36;
+}
+
+.sticky-btns {
+  @apply flex gap-2 text-white text-sm;
+}
+
+.minimize-btn {
+  @apply w-5 aspect-square bg-[color:var(--primary-color)] rounded-full flex justify-center items-center;
+}
+
+.remove-btn {
+  @apply w-5 aspect-square bg-[color:var(--secondary-color)] rounded-full flex justify-center items-center;
+}
+
+.sticky-content {
+  @apply w-full duration-300 ease-in bg-white;
+}
+
+.sticky-content textarea {
+  @apply h-full w-full outline-none resize-none px-2 text-[color:var(--secondary-text-color)];
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #bbbbbb;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #424242;
+  cursor: pointer;
+}
+
+canvas#canvas {
+  position: absolute;
+  /* cursor: crosshair; */
+  /* cursor: url(../Img/Pen.png) 0 60,auto; */
+  /* cursor: url(../Img/eraser.png) 12 25,auto; */
+  z-index: -1;
+  touch-action: none;
+  top: 0;
+  left: 0;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
